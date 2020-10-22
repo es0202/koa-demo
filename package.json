@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "koa": "^2.13.0",
+    "koa-bodyparser": "^4.3.0",
+    "koa-router": "^9.4.0",
+    "koa-static": "^5.0.0",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.6"
+  },
+  "name": "koa-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "es0202 <LiHuan0202es@163.com>",
+  "license": "MIT",
+  "repository": "https://github.com/es0202/koa-demo"
+}
