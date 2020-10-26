@@ -84,7 +84,7 @@ async function insertUser(value) {
     let _sql = "insert into t_users set ?"
     return query(_sql, value)
   }
-  return;
+  throw new Error('username has exist')
 }
 module.exports = {
   // 注册用户

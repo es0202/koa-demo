@@ -17,13 +17,13 @@ module.exports = {
     }).then(data => {
       ctx.response.body = {
         Code: 0,
-        Msg: 'node success'
+        Msg: 'register success'
       }
     }).catch(err => {
       console.log(err.message)
       ctx.response.body = {
         Code: -1,
-        Msg: 'fail to register'
+        Msg: err.message
       }
     })
   },
