@@ -36,14 +36,16 @@ module.exports = {
     const user = await findUserData(username)
     if (user.length == 1) {
       if (user[0].password == md5(password)) {
-        const obj={username:username}
+        const obj = {
+          username: username
+        }
         ctx.cookies.set(
           'cid',
           Crypto.AES.encrypt(JSON.stringify(obj), 'secret-key').toString(), {
             domain: 'localhost', // 写cookie所在的域名
             path: '/', // 写cookie所在的路径
-            maxAge: 10 * 60 * 1000, // cookie有效时长
-            expires: new Date().getDate() + 1, // cookie失效时间
+            // maxAge: 60 * 60 * 1000, // cookie有效时长
+            expires: new Date(new Date(new Date().setDate(new Date().getDate()+1)).toLocaleDateString()), // cookie失效时间
             httpOnly: false, // 是否只用于http请求中获取
             overwrite: false // 是否允许重写
           }
