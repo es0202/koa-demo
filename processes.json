@@ -1,0 +1,26 @@
+{
+  "apps": [
+    {
+      "name": "koa-demo",
+      "cwd": "./",
+      "script": "app.js",      
+      "watch": ["config","controller","middleware","routes","utils"],
+      "ignore_watch":["node_modules","log"],
+      "log_date_format": "YYYY-MM-DD HH:mm Z",
+      "error_file": "/log/err.log",
+      "out_file": "log/out.log",
+      "min_uptime": "200s",
+      "?min_uptime":"最小运行时间,200s内退出被认为程序异常退出",
+      "max_restarts": 10,
+      "?max_restarts":"程序异常退出重启次数",
+      "max_memory_restart": "500M",
+      "?max_memory_restart": "应用超出指定内存重启",
+      "pid_file": "pid/node-geo-api.pid",
+      "cron_restart": "1 0 * * *",
+      "merge_logs": true,
+      "exec_mode": "fork",
+      "autorestart": true,
+      "vizion": true
+    }
+  ]
+}
